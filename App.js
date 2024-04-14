@@ -14,12 +14,16 @@ function App() {
   const handleAddToPlaylist = (song) => {
     if (!playlist.includes(song)) {
       setPlaylist([...playlist, song]);
+    } else{
+      alert("Song already exists in playlist. Choose another song.");
     }
   };
 
   const handlePlaySong = (song) => {
     setCurrentSong(song);
   };
+
+  
 
   return (
     <div className="App">
